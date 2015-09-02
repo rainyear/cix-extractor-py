@@ -44,7 +44,7 @@ class Extractor():
         self.ctexts   = self.body.split("\n")
         self.textLens = [len(text) for text in self.ctexts]
 
-        self.cblocks  = list(map(lambda x:0, range(0,len(self.ctexts) - self.blockSize)))
+        self.cblocks  = [0]*(len(self.ctexts) - self.blockSize)
         lines = len(self.ctexts)
         for i in range(self.blockSize):
             self.cblocks = list(map(lambda x,y: x+y, self.textLens[i : lines-1-self.blockSize+i], self.cblocks))
