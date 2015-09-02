@@ -77,5 +77,5 @@ class Extractor():
         # print(len(self.body.strip("\n")))
 
 if __name__ == '__main__':
-    ext = Extractor(url="http://www.cnbeta.com/articles/426405.htm", image=False)
+    ext = Extractor(url="http://blog.rainy.im/2015/09/02/web-content-and-main-image-extractor/",blockSize=5, image=False)
     print(ext.getContext())
