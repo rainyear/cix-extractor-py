@@ -6,7 +6,7 @@ import re
 
 DBUG   = 0
 
-reBODY = r'<body.*?>([\s\S]*?)<\/body>'
+reBODY =re.compile( r'<body.*?>([\s\S]*?)<\/body>', re.I)
 reCOMM = r'<!--.*?-->'
 reTRIM = r'<{0}.*?>([\s\S]*?)<\/{0}>'
 reTAG  = r'<[\s\S]*?>|[ \t\r\f\v]'
